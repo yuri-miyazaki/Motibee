@@ -1,0 +1,36 @@
+.post-container {
+    margin: 50px auto;
+    width: 50%;
+    border: solid #CDFFF6;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #CDFFF6;
+  }
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+  input[type="text"] {
+    width: 95%;
+    height: 40px;
+  }
+  input[type="submit"] {
+    width: 200px;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+
+  .button {
+    background-color: #333;
+    border: 2px solid #333;
+    color: #fff;
+    line-height: 50px;
+  }
+  .button:hover {
+    background-color: #fff;
+    border-color: #59b1eb;
+    color: #59b1eb;
+  }

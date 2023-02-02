@@ -1,0 +1,240 @@
+// Place all the styles related to the tops controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+
+
+
+ a:hover {
+    color: #FFAACE;
+  }
+
+
+
+  #link-first-block {
+    background-image: url("top,nagai.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 650px;
+    display: flex;
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1.about{
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+ 
+  justify-content: center;
+}
+
+.first-login{
+  position:relative;
+			top: 230px;
+			left:-160px;
+      margin: 20px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+
+a.btn-border {
+  margin-bottom: 12px;
+  padding: 0;
+
+  -webkit-transition: all 0.3s;
+
+  transition: all 0.3s;
+
+  border-radius: 0;
+}
+
+a.btn-border span {
+  position: relative;
+
+  display: block;
+
+  padding: 1.25rem 3rem;
+
+  color: #000;
+  border: 2px solid #000;
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+a.btn-border:before {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 14px;
+  
+
+  content: "";
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+
+  border: 2px solid #000;
+  border-top: 1px solid #000;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-image: -webkit-repeating-linear-gradient(
+    135deg,
+    #000,
+    #000 1px,
+    transparent 2px,
+    transparent 5px
+  );
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #000,
+    #000 1px,
+    transparent 2px,
+    transparent 5px
+  );
+  background-size: 7px 7px;
+
+  -webkit-backface-visibility: hidden;
+
+  backface-visibility: hidden;
+}
+
+a.btn-border:hover {
+  -webkit-transform: translate(0, 3px);
+  transform: translate(0, 3px);
+}
+
+a.btn-border:hover:before {
+  bottom: -5px;
+}
+
+a.btn-border:active {
+  -webkit-transform: translate(0, 7px);
+  transform: translate(0, 7px);
+}
+
+a.btn-border:active:before {
+  bottom: -1px;
+}
+
+
+
+
+
+.flex-container {
+  display: flex;
+}
+
+.flex_test-box {
+  background-color: #fff;    
+  padding:  10px;             
+  display: flex;             
+}
+.flex_test-item {
+  color:  #fff;               
+  margin:  10px;              
+  border-radius:  5px;        
+  align-self: stretch;        
+}
+img {
+  width: 100%;               
+}
+
+.offer-wrapper{
+  height:700px;
+  text-align:center;
+}
+
+.offer{
+  padding: 50px;
+}
+
+.offers{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.imgoffer{
+  
+  width: 300px;
+  margin: 3px auto 0;
+  transition-duration: 0.5s;
+}
+.imgoffer{
+  width: 100%;
+  cursor: pointer;
+}
+.imgoffer:hover{
+  
+  transform: translateY(-20px);
+  transition-duration: 0.5s;
+}
+
+.second-setumei-block{
+  border: 4px solid #82636b;
+  border-radius: 240px 15px 185px 15px / 15px 200px 15px 185px;
+  margin: 2em 0;
+  padding: 2em;
+}
+
+.container{
+  border: 4px solid #82636b;
+  border-radius: 240px 15px 185px 15px / 15px 200px 15px 185px;
+  margin: 2em 0;
+  padding: 2em;
+}
+
+.login-block{
+  margin: 50px;
+  
+}
+
+
+
+  

@@ -1,0 +1,37 @@
+<h1>マイページ</h1>
+<p>名前 : <%= @user.name %></p>
+<p>メールアドレス : <%= @user.email %></p>
+<p>プロフィール : <%= @user.profile %></p>
+
+<% if current_user.id == @user.id %>
+  <%= link_to "プロフィールを編集する", edit_user_registration_path, class:"hensyuu" %>
+<% end %>
+
+<div class=toukouitiran>
+<div class="toukouitiran_inner">
+<h3>投稿一覧</h3>
+</div>
+<% @user.tweets.each do |t| %>
+   <%= link_to tweet_path(t.id) do %>
+    <%= image_tag t.image_url, size: "250x200", class: "syosai" if t.image? %>
+  
+  <% end %>
+<% end %>
+</div>
+</div>
+
+<div class=toukouitiran>
+<div class="toukouitiran_inner">
+<h3>ユーザーがいいねした投稿一覧</h3>
+</div>
+<% @user.liked_tweets.each do |t| %>
+<%= t.user.name %>
+<%= image_tag t.image_url, size: "250x200", class: "iine" if t.image? %>
+<% end %>
+</div>
+</div>
+
+
+<p><%= link_to "Tweet一覧に戻る", tweets_path %></p>
+
+

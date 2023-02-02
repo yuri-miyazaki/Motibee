@@ -1,0 +1,56 @@
+<body>
+
+<div class="first-block">
+<h1>投稿一覧</h1>
+  <div class="itiran">
+    <% @tweets.each do |t| %>
+    
+    <div class="row">
+      <div class="col-sm-4">
+        <%= image_tag t.image_url, size: "250x250" if t.image? %>
+      </div>
+      <div class="col-sm-6">
+          <h3><%= t.body %></h3>
+          <%= t.created_at %>
+      <% if user_signed_in? %>
+        <% if current_user.already_liked?(t) %>
+            <%= link_to tweet_like_path(id: t.id, tweet_id: t.id), method: :delete do %>
+           <h4> <i class="fas fa-heart"></i><%= t.likes.count %></h4>
+            <% end %>
+        <% else %>
+        <%= link_to tweet_likes_path(id: t.id, tweet_id: t.id), method: :post do %>
+          <h4>  <i class="far fa-heart"></i><%= t.likes.count %></h4>
+        <% end %>
+        <% end %>
+        <% else %>
+       <h4> <i class="far fa-heart"></i><%= t.likes.count %></h4>
+       <% end %>
+        <li><%= link_to "コメントする", tweet_path(t.id) %></li>
+        <li> <%= link_to "編集する", edit_tweet_path(t.id) %></li>
+        <li><%= link_to "削除する", tweet_path(t.id), method: :delete %></li>
+      </div>
+    </div>
+    <% end %>
+
+
+
+<h4><%= paginate @tweets %></h4>
+
+
+
+
+
+<% if user_signed_in? %>
+  <% if current_user == @user || current_user.admin? %>
+
+  <% end %>
+<% end %>
+</div>
+</div>
+
+<footer>
+<p>Copyright © GeekSalon All Rights Reserved.</p>
+</footer>
+
+
+<link rel="stylesheet" type="tweets/css" href="stylesheets/tweets.css">

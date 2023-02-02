@@ -1,0 +1,71 @@
+
+<div class="tweetsyosai">
+<h1>投稿詳細</h1>
+
+<p><%= @tweet.body %></p>
+<p><%= @tweet.created_at %></p>
+<%= image_tag @tweet.image_url, class: "aiueo"  if @tweet.image?  %>
+</div>
+
+<div class="comment-wrapper">
+<div class="comment-wrapper_inner">
+  <h3>コメント一覧</h3>
+  </div>
+  <% @comments.each do |c| %>
+      <li><%= c.user.name unless c.user.blank? %>
+      <br></li>
+      <%= image_tag c.image_url, class: "comment" if c.image? %>
+      <h3><%= c.content %></h3>
+      <br>
+  <% end %>
+  
+</div>
+
+  <% if user_signed_in? %>
+    <%= form_with(model: [@tweet, @comment], local: true) do |f| %>
+      <div class="img-field">
+      
+      <h3> <%= f.label :絵師様に好きを伝えましょう %></h3>
+      <%= f.file_field :image %>
+    </div>
+      <%= f.text_area :content, size: "100x5" %>
+      <%= button_tag type: "submit", size: "100x5" do %>
+       <h4> <i class="far fa-comments"></i> コメントする</h4>
+          <div class="field">
+          
+  </div>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+
+
+  <% if user_signed_in? %>
+      <% if current_user.already_liked?(@tweet) %>
+          <%= link_to tweet_like_path(@tweet), method: :delete do %>
+           <h4> <i class="fas fa-heart"></i><%= @tweet.likes.count %></h4>
+             
+          <% end %>
+      <% else %>
+          <%= link_to tweet_likes_path(@tweet), method: :post do %>
+            <h4><i class="far fa-heart"></i><%= @tweet.likes.count %></h4>
+          <% end %>
+      <% end %>
+  <% else %>
+ <h4> <i class="far fa-heart"></i><%= @tweet.likes.count %></h4>
+  <% end %>
+</div>
+
+<h2>いいねしたユーザー</h2>
+<% @tweet.liked_users.each do |user| %>
+  <li><%= user.name %></li>
+<% end %>
+
+
+<p><%= link_to "編集する", edit_tweet_path(@tweet.id) %></p>
+<p><%= link_to "Tweet一覧に戻る", tweets_path %></p>
+
+
+
+<link rel="stylesheet" type="tweets/css" href="stylesheets/tweets.css">
+

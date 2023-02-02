@@ -1,0 +1,26 @@
+<div class="post-container">
+<h1 class="title">新規投稿</h1>
+
+<%= form_for @tweet do |f| %>
+  <div class="field">
+    <%= f.label :作品タイトル %>
+    <br> <%= f.text_field :body, :size => 140 %></br>
+    </div>
+
+    <div class="field">
+    <%= f.label :image %>
+    <%= f.file_field :image %>
+  </div>
+
+  <%= f.submit "投稿する",class:"btn badge-primary" %>
+<% end %>
+<%= link_to "投稿一覧に戻る", tweets_path %>
+</div>
+
+
+<footer>
+<p>Copyright © GeekSalon All Rights Reserved.</p>
+</footer>
+
+
+<%= stylesheet_link_tag 'new', :media => "all" %>

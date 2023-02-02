@@ -1,0 +1,177 @@
+// Place all the styles related to the tweets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  header{
+    height: 100px;
+    background-color: #CDFFF6;
+  }
+
+
+  h1 {
+    color: #FFAACE;
+    
+    
+}
+  
+
+  .row{
+    padding-top: 20px;
+
+  }
+
+  .container{
+    margin-left: 200px;
+    margin: 0 auto;
+
+  }
+
+  .img-field{
+    margin: 0 auto;
+   margin-left: 20px;
+   width: 300px;
+ }
+
+
+ .submit{
+  margin: 0 auto;
+   margin-left: 20px;
+   width: 300px;
+
+ }
+
+  .itiran{
+   margin-left: 150px;
+  }
+
+
+  .row {
+    border-bottom: dashed #00acee;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+  }
+
+  h3{
+    font-size: 40px;
+
+}
+
+li{
+font-size: 20px;
+
+}
+
+.aiueo{
+  width: 50%;
+}
+
+
+.tweetft {
+  color: white;
+  background-color: rgb(94, 215, 179);
+  display: flex;
+  align-items: center;
+  position: fixed;
+  justify-content: flex-end;
+  
+}
+
+.tweetft{
+  width: 100%;
+  height: 30px;
+  position: absolute;
+}
+
+
+
+
+
+  .tweet-container {
+    margin: 50px auto;
+    width: 50%;
+    border: solid #d3def1;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #d3def1;
+  }
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 50px;
+  }
+  input[type="text"] {
+    width: 95%;
+    height: 40px;
+  }
+  input[type="submit"] {
+    width: 200px;
+    font-size: 20px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+ 
+
+
+    p{
+      font-size: 15px;
+      margin: 20px;
+      
+      }
+
+      .tweetsyosai{
+        text-align:center;
+        padding:20px 0;
+      }
+  
+    .post-container{
+      margin-bottom: 200px;
+    }
+  
+   
+    .comment-wrapper  {
+        position: relative;
+      }
+      .comment-wrapper_inner{
+        padding: 1em;
+      }
+      .comment-wrapper:before,
+      .comment-wrapper:after{
+        content: "";
+        width: 4em;
+        height: 4em;
+        position: absolute;
+      }
+      .comment-wrapper::before{
+        border-top: 2px solid #0094D6;
+        border-left: 2px solid #0094D6;
+      }
+      .comment-wrapper::after{
+        border-bottom: 2px solid #0094D6;
+        border-right: 2px solid #0094D6;
+        right: 0;
+        bottom: 0;
+      }
+      .comment-wrapper h3{
+        margin: 0 0 .5em;
+      }
+      .comment-wrapper h3:first-letter{
+        font-size: 1.4em;
+        color: #0094D6;
+      }
+
+      .comment-wrapper{
+        margin: 100px;
+      }
+
+      .comment{
+          width: 40%;
+    }
+
+    form{
+      margin: 100px;
+    }

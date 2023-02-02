@@ -1,0 +1,182 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+.navbar-nav.mr-auto{
+  text-align: right;
+}
+
+
+.navbar-brand{
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+}
+
+
+a.navbar-brand{
+    font-size: 50px;
+    color: #FFAACE;
+
+}
+
+
+.nav-item{
+  margin:20px;
+  text-align: right;
+
+}
+
+
+
+
+  .navbar-toggler {
+    display : block;
+    position: fixed;
+    z-index : 3;
+    right : 13px;
+    top   : 12px;
+    width : 42px;
+    height: 42px;
+    cursor: pointer;
+    text-align: center;
+  }
+  .navbar-toggler span {
+    display : block;
+    position: absolute;
+    width   : 30px;
+    height  : 2px ;
+    left    : 6px;
+    background : #555;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition   : 0.3s ease-in-out;
+    transition        : 0.3s ease-in-out;
+  }
+  .navbar-toggler  span:nth-child(1) {
+    top: 10px;
+  }
+  .navbar-toggler  span:nth-child(2) {
+    top: 20px;
+  }
+  .navbar-toggler  span:nth-child(3) {
+    top: 30px;
+  }
+  
+  /* ナビ開いてる時のボタン */
+  .navbar-toggler .active span:nth-child(1) {
+    top : 16px;
+    left: 6px;
+    background :#fff;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform   : rotate(-45deg);
+    transform        : rotate(-45deg);
+  }
+  
+  .navbar-toggler .active span:nth-child(2),
+  .navbar-toggler .active span:nth-child(3) {
+    top: 16px;
+    background :#fff;
+    -webkit-transform: rotate(45deg);
+    -moz-transform   : rotate(45deg);
+    transform        : rotate(45deg);
+  }
+  
+  nav.collapse navbar-collapse  {
+    position: fixed;
+    z-index : 2;
+    top  : 0;
+    left : 0;
+    color: #fff;
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition: opacity .6s ease, visibility .6s ease;
+  }
+  
+  nav.collapse navbar-collapse ul {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+  }
+  
+  nav.collapse navbar-collapse ul li {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    transition: .4s all;
+  }
+  nav.collapse navbar-collapse ul li:last-child {
+    padding-bottom: 0;
+  }
+  nav.collapse navbar-collapse ul li:hover{
+    background :#ddd;
+  }
+  
+  nav.collapse navbar-collapse ul li a {
+    display: block;
+    color: #fff;
+    padding: 1em 0;
+    text-decoration :none;
+  }
+  
+  /* このクラスを、jQueryで付与・削除する */
+  nav.collapse navbar-collapse.active {
+    opacity: 100;
+  
+  }
+  
+  
+
+
+
+a:hover {
+    color: #FFAACE;
+  }
+
+
+ .nav-item{
+    font-size: 20px;
+   
+}
+.navbar navbar-expand-lg{
+margin-right: auto
+}
+
+ body {
+  font-family: 'Edu VIC WA NT Beginner', cursive;
+  font-family: 'Kaisei Opti', serif;
+  
+    }
+    
+
+    footer {
+      color: white;
+    
+      background-color: rgb(94, 215, 179);
+    
+      display: flex;
+      align-items: center;
+      position: fixed;
+      justify-content: flex-end;
+      
+    }
+
+    footer {
+      width: 100%;
+      height: 30px;
+      position: absolute;
+    }
+
+    
